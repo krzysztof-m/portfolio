@@ -1,0 +1,47 @@
+.main-hero {
+  padding: 4.375rem 0 3.125rem;
+  
+  background-image: url(../img/layout/topbg.svg);
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  
+  @include atMedium {
+    padding: 5rem 0;
+    background-size: 80% 100%;
+  }
+  @include atLarge {
+    padding: 11.25rem 0;
+  }
+  
+  &__title {
+    font-size: 2rem;
+    @include atSmallest {
+      font-size: 3.125rem;
+    }
+    @include atMedium {
+      margin-top: 1.875rem;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 1.25rem;
+    font-weight: 300;
+    @include atSmallest {
+      font-size: 1.875rem;
+      margin-bottom: 1.875rem;
+    }
+  }
+  &__text-content {
+    margin-bottom: 1.25rem;
+  }
+  
+  &__img {
+    @include untillLarge {
+      display: block;
+      max-width: 400px;
+      margin: 1.25rem auto 0;
+    }
+  }
+  
+}
