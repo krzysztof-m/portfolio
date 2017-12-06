@@ -1,0 +1,38 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #1c92d2; }
+  a:hover {
+    color: #16D2F6; }
+
+img {
+  max-width: 100%; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; }
+  .container .container {
+    padding: 0; }
+  .container--narrow {
+    max-width: 900px; }
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px; }
+  .row__col-half {
+    width: 50%;
+    padding: 0 15px; }
+    .row__col-half--small {
+      width: 45%; }
+    .row__col-half--smaller {
+      width: 35%; }
+    .row__col-half--to-right {
+      margin-left: auto; }

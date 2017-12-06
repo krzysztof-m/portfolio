@@ -1,0 +1,22 @@
+.row {
+  display: flex;
+  margin-right: -15px;
+  margin-left: -15px;
+  
+  &__col-half {
+    width: 50%;
+    padding: 0 15px;
+    
+    &--small {
+      width: 45%;
+    }
+    
+    &--smaller {
+      width: 35%;
+    }
+    
+    &--to-right {
+      margin-left: auto;
+    }
+  }
+}
