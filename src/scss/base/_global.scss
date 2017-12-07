@@ -6,14 +6,19 @@
 
 body {
   font-family: $font-family;
-  font-size: 1rem;
+  font-size: .875rem;
   line-height: 1.6;
   font-weight: $font-weight;
+  @include atSmallest {
+    font-size: 1rem;
+  }
 }
+
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-headline;
   line-height: 1.2;
+  color: $color-dark;
 }
 
 a {

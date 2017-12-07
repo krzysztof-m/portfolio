@@ -1,0 +1,25 @@
+.description {
+  max-width: 400px;
+  @include atMedium {
+    max-width: none;
+  }
+  @include untillMedium {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  &__title {
+    font-size: 1.25rem;
+    margin-bottom: .625rem;
+    @include atSmallest {
+      font-size: 1.5rem;
+    }
+    @include atMedium {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &__text {
+    margin-bottom: 1.875rem;
+  }
+  
+}
