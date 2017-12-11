@@ -22,6 +22,12 @@
   }
 }
 
+@mixin atSmall {
+  @media (min-width: $breakpoint-small) {
+    @content;
+  }
+}
+
 @mixin atSmallest {
   @media (min-width: $breakpoint-smallest) {
     @content;

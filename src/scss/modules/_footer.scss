@@ -1,0 +1,39 @@
+.footer {
+  padding: 6.25rem 0 3.125rem;
+  
+  background-image: url(../img/layout/footer.svg);
+  background-size: cover;
+  
+  text-align: center;
+  color: #fff;
+  
+  
+  @include atSmall {
+    padding: 12.5rem 0 3.125rem;
+    background-size: 100% 100%;
+  }
+  
+  &__title {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: #fff;
+    @include atSmallest {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &__copyright {
+    margin-top: 1.875rem;
+    padding-top: 1.875rem;
+    
+    border-top: 1px rgba(255, 255, 255, 0.3) solid;
+  }
+  
+  &__email {
+    font-size: 1rem;
+    @include atSmallest {
+      font-size: 1.25rem;
+    }
+  }
+}
