@@ -99,6 +99,13 @@ img {
     position: relative;
     z-index: 2; }
 
+.link {
+  text-decoration: none; }
+  .link--white {
+    color: #fff; }
+    .link--white:hover {
+      color: #ddd; }
+
 .menu {
   list-style: none; }
   .menu a {
@@ -241,3 +248,31 @@ img {
   .icons__icon {
     font-size: 1.5rem;
     color: #aaa; }
+
+.footer {
+  padding: 6.25rem 0 3.125rem;
+  background-image: url(../img/layout/footer.svg);
+  background-size: cover;
+  text-align: center;
+  color: #fff; }
+  @media (min-width: 768px) {
+    .footer {
+      padding: 12.5rem 0 3.125rem;
+      background-size: 100% 100%; } }
+  .footer__title {
+    font-size: 1.875rem;
+    line-height: 2.5rem;
+    margin-bottom: 1.25rem;
+    color: #fff; }
+    @media (min-width: 420px) {
+      .footer__title {
+        font-size: 2.5rem; } }
+  .footer__copyright {
+    margin-top: 1.875rem;
+    padding-top: 1.875rem;
+    border-top: 1px rgba(255, 255, 255, 0.3) solid; }
+  .footer__email {
+    font-size: 1rem; }
+    @media (min-width: 420px) {
+      .footer__email {
+        font-size: 1.25rem; } }
