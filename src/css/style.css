@@ -26,6 +26,11 @@ a {
 img {
   max-width: 100%; }
 
+.header {
+  position: absolute;
+  width: 100%;
+  margin-top: 1.25rem; }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -67,7 +72,6 @@ img {
 .btn {
   display: inline-block;
   padding: 0.625em 1.25em;
-  background-color: #1c92d2;
   border-radius: .2em;
   color: #fff;
   text-decoration: none;
@@ -75,22 +79,46 @@ img {
   overflow: hidden; }
   .btn:hover {
     color: #fff; }
-  .btn::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #16D2F6;
-    z-index: 1;
-    -webkit-transform: translateX(-100%);
-            transform: translateX(-100%);
-    -webkit-transition: .3s transform ease-out;
-    transition: .3s transform ease-out; }
-  .btn:hover::before {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
+  .btn--primary {
+    background-color: #1c92d2; }
+    .btn--primary::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #16D2F6;
+      z-index: 1;
+      -webkit-transform: translateX(-100%);
+              transform: translateX(-100%);
+      -webkit-transition: .3s transform ease-out;
+      transition: .3s transform ease-out; }
+    .btn--primary:hover::before {
+      -webkit-transform: translateX(0);
+              transform: translateX(0); }
+  .btn--underline {
+    border-radius: 0; }
+    .btn--underline::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      border-bottom: 1px #fff solid;
+      -webkit-transform: scaleX(0);
+              transform: scaleX(0);
+      -webkit-transform-origin: 0 50%;
+              transform-origin: 0 50%;
+      -webkit-transition: -webkit-transform .25s ease-out;
+      transition: -webkit-transform .25s ease-out;
+      transition: transform .25s ease-out;
+      transition: transform .25s ease-out, -webkit-transform .25s ease-out; }
+    .btn--underline:hover::before {
+      -webkit-transform: scaleX(1);
+              transform: scaleX(1); }
+  .btn--small {
+    padding: .3em .7em; }
   .btn-group .btn {
     margin-right: .625rem; }
     .btn-group .btn:last-child {
@@ -116,6 +144,11 @@ img {
     margin-left: 0.9375rem; }
   .menu--white a {
     color: #fff; }
+  .menu--large {
+    font-size: 1rem; }
+    @media (min-width: 420px) {
+      .menu--large {
+        font-size: 1.375rem; } }
   .menu__icon {
     font-size: 2rem; }
 
