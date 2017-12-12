@@ -25,7 +25,9 @@
       transform: translateX(-100%);
       transition: .3s transform ease-out;
     }
-    &:hover::before {
+    &:hover::before,
+    &:focus::before,
+    &:active::before {
       transform: translateX(0);
     }
   }
@@ -46,6 +48,11 @@
     
     &:hover::before {
       transform: scaleX(1);
+    }
+    
+    &:focus,
+    &:active {
+      border: 2px #fff solid;
     }
   }
   
