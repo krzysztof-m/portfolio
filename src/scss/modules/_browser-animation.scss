@@ -1,0 +1,88 @@
+/*
+* Browser Animation
+*/
+$page-elements: (
+  ('slider', fadeInTop),
+  ('img', fadeInBottom),
+  ('first-col', fadeInBottom),
+  ('second-col', fadeInBottom),
+  ('icon-1', fadeInBottom),
+  ('col-1', fadeInBottom),
+  ('icon-2', fadeInBottom),
+  ('col-2', fadeInBottom),
+  ('icon-3', fadeInBottom),
+  ('col-3', fadeInBottom)
+);
+$menu-elements: (
+  ('menu', fadeInTop),
+  ('menu-item-1', fadeInTop),
+  ('menu-item-2', fadeInTop),
+  ('menu-item-3', fadeInTop),
+  ('menu-item-4', fadeInTop)
+);
+
+$animation-interval: .3s;
+$animation-start: .7s;
+$menu-animation-start: 2.7s;
+$animation-duration: 1s;
+
+/* Browser window animation */
+#browser {
+  animation: fadeInRightBottom 1s forwards;
+}
+
+/* Animation for all elements inside browser window besides menu */
+@for $i from 1 through length($page-elements) {
+    $el: nth($page-elements, $i);
+    $selector: nth($el, 1);
+    $animation-name: nth($el, 2);
+  
+    ##{$selector} {
+      opacity: 0;
+      animation: #{$animation-name} $animation-duration ($animation-start + $animation-interval * ($i - 1))  forwards;
+    }
+}
+
+/* Menu elements animation */
+@for $i from 1 through length($menu-elements) {
+    $el: nth($menu-elements, $i);
+    $selector: nth($el, 1);
+    $animation-name: nth($el, 2);
+  
+    ##{$selector} {
+      opacity: 0;
+      animation: #{$animation-name} $animation-duration ($menu-animation-start + $animation-interval * ($i - 1))  forwards;
+    }
+}
+
+/* Animation keyframes */
+@keyframes fadeInRightBottom {
+    0% {
+        opacity: 0;
+        transform: translate(50px,30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+}
+@keyframes fadeInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
