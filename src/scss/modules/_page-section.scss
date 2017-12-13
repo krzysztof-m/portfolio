@@ -23,6 +23,9 @@
   
   &--portfolio {
     background-image: url(../img/layout/portfoliobg.svg);
+    .no-svg & {
+      background-image: url(../img/layout/portfoliobg.png);
+    }
     background-size: 110% 100%;
     background-repeat: no-repeat;
     background-position: 0% 0%;
