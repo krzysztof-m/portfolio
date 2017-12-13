@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "font-awesome": "^4.7.0",
+    "lazysizes": "^4.0.1",
     "smoothscroll": "^0.4.0"
   },
   "devDependencies": {

@@ -1,1 +1,2 @@
 import 'smoothscroll';
+import 'lazysizes';
