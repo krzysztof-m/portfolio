@@ -46,28 +46,47 @@ img {
     margin-bottom: 1.875rem; }
   @media (min-width: 980px) {
     .row {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
       margin-right: -15px;
       margin-left: -15px; }
+      .flexbox .row {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; }
+      .no-flexbox .row::after {
+        content: "";
+        display: table;
+        clear: both; }
       .row__col-half {
         width: 50%;
         padding: 0 15px;
         margin-bottom: 0; }
+        .no-flexbox .row__col-half {
+          float: left; }
         .row__col-half--small {
           width: 45%; }
-        .row__col-half--to-right {
+          .no-flexbox .row__col-half--small {
+            margin-right: 5%;
+            margin-left: 0; }
+            .no-flexbox .row__col-half--small.row__col-half--to-right {
+              margin-left: 5%;
+              margin-right: 0; }
+        .flexbox .row__col-half--to-right {
           margin-left: auto; }
       .row--padding {
         padding: 5rem 0; }
-      .row--align-middle {
+      .flexbox .row--align-middle {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; } }
   @media (min-width: 1200px) {
     .row__col-half--smaller {
-      width: 35%; } }
+      width: 35%; }
+      .no-flexbox .row__col-half--smaller {
+        margin-right: 15%;
+        margin-left: 0; }
+      .row__col-half--smaller.row__col-half--to-right {
+        margin-left: 15%;
+        margin-right: 0; } }
 
 .btn {
   display: inline-block;
@@ -172,6 +191,8 @@ img {
   background-repeat: no-repeat;
   background-size: 110% 100%;
   color: #fff; }
+  .no-svg .main-hero {
+    background-image: url(../img/layout/topbg.png); }
   @media (min-width: 980px) {
     .main-hero {
       padding: 5rem 0;
@@ -227,6 +248,8 @@ img {
     background-size: 110% 100%;
     background-repeat: no-repeat;
     background-position: 0% 0%; }
+    .no-svg .page-section--portfolio {
+      background-image: url(../img/layout/portfoliobg.png); }
     @media (min-width: 980px) {
       .page-section--portfolio {
         background-size: 65% 100%;
@@ -246,7 +269,9 @@ img {
       height: 100%;
       bottom: -5%;
       left: -10%;
-      z-index: 1; } }
+      z-index: 1; }
+      .no-svg .image::before {
+        background-image: url(../img/layout/image-shape.png); } }
   @media (min-width: 420px) and (min-width: 980px) {
     .image::before {
       bottom: -20%;
@@ -302,6 +327,8 @@ img {
   background-size: cover;
   text-align: center;
   color: #fff; }
+  .no-svg .footer {
+    background-image: url(../img/layout/footer.png); }
   @media (min-width: 768px) {
     .footer {
       padding: 12.5rem 0 3.125rem;
@@ -327,87 +354,73 @@ img {
 /*
 * Browser Animation
 */
-/* Browser window animation */
-#browser {
-  -webkit-animation: fadeInRightBottom 1s forwards;
-          animation: fadeInRightBottom 1s forwards; }
-
-/* Animation for all elements inside browser window besides menu */
-#slider {
-  opacity: 0;
-  -webkit-animation: fadeInTop 1s 0.7s forwards;
-          animation: fadeInTop 1s 0.7s forwards; }
-
-#img {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 1s forwards;
-          animation: fadeInBottom 1s 1s forwards; }
-
-#first-col {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 1.3s forwards;
-          animation: fadeInBottom 1s 1.3s forwards; }
-
-#second-col {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 1.6s forwards;
-          animation: fadeInBottom 1s 1.6s forwards; }
-
-#icon-1 {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 1.9s forwards;
-          animation: fadeInBottom 1s 1.9s forwards; }
-
-#col-1 {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 2.2s forwards;
-          animation: fadeInBottom 1s 2.2s forwards; }
-
-#icon-2 {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 2.5s forwards;
-          animation: fadeInBottom 1s 2.5s forwards; }
-
-#col-2 {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 2.8s forwards;
-          animation: fadeInBottom 1s 2.8s forwards; }
-
-#icon-3 {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 3.1s forwards;
-          animation: fadeInBottom 1s 3.1s forwards; }
-
-#col-3 {
-  opacity: 0;
-  -webkit-animation: fadeInBottom 1s 3.4s forwards;
-          animation: fadeInBottom 1s 3.4s forwards; }
-
-/* Menu elements animation */
-#menu {
-  opacity: 0;
-  -webkit-animation: fadeInTop 1s 2.7s forwards;
-          animation: fadeInTop 1s 2.7s forwards; }
-
-#menu-item-1 {
-  opacity: 0;
-  -webkit-animation: fadeInTop 1s 3s forwards;
-          animation: fadeInTop 1s 3s forwards; }
-
-#menu-item-2 {
-  opacity: 0;
-  -webkit-animation: fadeInTop 1s 3.3s forwards;
-          animation: fadeInTop 1s 3.3s forwards; }
-
-#menu-item-3 {
-  opacity: 0;
-  -webkit-animation: fadeInTop 1s 3.6s forwards;
-          animation: fadeInTop 1s 3.6s forwards; }
-
-#menu-item-4 {
-  opacity: 0;
-  -webkit-animation: fadeInTop 1s 3.9s forwards;
-          animation: fadeInTop 1s 3.9s forwards; }
+.cssanimations {
+  /* Browser window animation */
+  /* Animation for all elements inside browser window besides menu */
+  /* Menu elements animation */ }
+  .cssanimations #browser {
+    -webkit-animation: fadeInRightBottom 1s forwards;
+            animation: fadeInRightBottom 1s forwards; }
+  .cssanimations #slider {
+    opacity: 0;
+    -webkit-animation: fadeInTop 1s 0.7s forwards;
+            animation: fadeInTop 1s 0.7s forwards; }
+  .cssanimations #img {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 1s forwards;
+            animation: fadeInBottom 1s 1s forwards; }
+  .cssanimations #first-col {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 1.3s forwards;
+            animation: fadeInBottom 1s 1.3s forwards; }
+  .cssanimations #second-col {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 1.6s forwards;
+            animation: fadeInBottom 1s 1.6s forwards; }
+  .cssanimations #icon-1 {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 1.9s forwards;
+            animation: fadeInBottom 1s 1.9s forwards; }
+  .cssanimations #col-1 {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 2.2s forwards;
+            animation: fadeInBottom 1s 2.2s forwards; }
+  .cssanimations #icon-2 {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 2.5s forwards;
+            animation: fadeInBottom 1s 2.5s forwards; }
+  .cssanimations #col-2 {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 2.8s forwards;
+            animation: fadeInBottom 1s 2.8s forwards; }
+  .cssanimations #icon-3 {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 3.1s forwards;
+            animation: fadeInBottom 1s 3.1s forwards; }
+  .cssanimations #col-3 {
+    opacity: 0;
+    -webkit-animation: fadeInBottom 1s 3.4s forwards;
+            animation: fadeInBottom 1s 3.4s forwards; }
+  .cssanimations #menu {
+    opacity: 0;
+    -webkit-animation: fadeInTop 1s 2.7s forwards;
+            animation: fadeInTop 1s 2.7s forwards; }
+  .cssanimations #menu-item-1 {
+    opacity: 0;
+    -webkit-animation: fadeInTop 1s 3s forwards;
+            animation: fadeInTop 1s 3s forwards; }
+  .cssanimations #menu-item-2 {
+    opacity: 0;
+    -webkit-animation: fadeInTop 1s 3.3s forwards;
+            animation: fadeInTop 1s 3.3s forwards; }
+  .cssanimations #menu-item-3 {
+    opacity: 0;
+    -webkit-animation: fadeInTop 1s 3.6s forwards;
+            animation: fadeInTop 1s 3.6s forwards; }
+  .cssanimations #menu-item-4 {
+    opacity: 0;
+    -webkit-animation: fadeInTop 1s 3.9s forwards;
+            animation: fadeInTop 1s 3.9s forwards; }
 
 /* Animation keyframes */
 @-webkit-keyframes fadeInRightBottom {

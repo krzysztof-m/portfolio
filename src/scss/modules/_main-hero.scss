@@ -3,6 +3,10 @@
   
   background-image: url(../img/layout/topbg.svg);
   
+  .no-svg & {
+    background-image: url(../img/layout/topbg.png);
+  }
+  
   background-repeat: no-repeat;
   background-size: 110% 100%;
   color: #fff;

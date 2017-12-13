@@ -8,6 +8,9 @@
     &::before {
       content: "";
       background-image: url(../img/layout/image-shape.svg);
+      .no-svg & {
+        background-image: url(../img/layout/image-shape.png);
+      }
       background-size: 100% 100%;
       position: absolute;
       width: 80%;

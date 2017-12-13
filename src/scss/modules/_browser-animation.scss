@@ -26,34 +26,38 @@ $animation-start: .7s;
 $menu-animation-start: 2.7s;
 $animation-duration: 1s;
 
-/* Browser window animation */
-#browser {
-  animation: fadeInRightBottom 1s forwards;
+
+.cssanimations {
+  /* Browser window animation */
+  #browser {
+    animation: fadeInRightBottom 1s forwards;
+  }
+
+  /* Animation for all elements inside browser window besides menu */
+  @for $i from 1 through length($page-elements) {
+      $el: nth($page-elements, $i);
+      $selector: nth($el, 1);
+      $animation-name: nth($el, 2);
+
+      ##{$selector} {
+        opacity: 0;
+        animation: #{$animation-name} $animation-duration ($animation-start + $animation-interval * ($i - 1))  forwards;
+      }
+  }
+
+  /* Menu elements animation */
+  @for $i from 1 through length($menu-elements) {
+      $el: nth($menu-elements, $i);
+      $selector: nth($el, 1);
+      $animation-name: nth($el, 2);
+
+      ##{$selector} {
+        opacity: 0;
+        animation: #{$animation-name} $animation-duration ($menu-animation-start + $animation-interval * ($i - 1))  forwards;
+      }
+  }
 }
 
-/* Animation for all elements inside browser window besides menu */
-@for $i from 1 through length($page-elements) {
-    $el: nth($page-elements, $i);
-    $selector: nth($el, 1);
-    $animation-name: nth($el, 2);
-  
-    ##{$selector} {
-      opacity: 0;
-      animation: #{$animation-name} $animation-duration ($animation-start + $animation-interval * ($i - 1))  forwards;
-    }
-}
-
-/* Menu elements animation */
-@for $i from 1 through length($menu-elements) {
-    $el: nth($menu-elements, $i);
-    $selector: nth($el, 1);
-    $animation-name: nth($el, 2);
-  
-    ##{$selector} {
-      opacity: 0;
-      animation: #{$animation-name} $animation-duration ($menu-animation-start + $animation-interval * ($i - 1))  forwards;
-    }
-}
 
 /* Animation keyframes */
 @keyframes fadeInRightBottom {
