@@ -1,9 +1,12 @@
 var path = require('path');
 
 module.exports = {
-  entry: './src/js/tmp/vendor.js',
+  entry: {
+    App: './src/js/tmp/app.js',
+    Vendor: './src/js/tmp/vendor.js' 
+  },
   output: {
-    filename: 'Vendor.js',
+    filename: '[name].js',
     path: path.resolve(__dirname, 'src/js')
   },
   module: {
