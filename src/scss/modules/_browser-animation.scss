@@ -27,7 +27,7 @@ $menu-animation-start: 2.7s;
 $animation-duration: 1s;
 
 
-.cssanimations {
+.cssanimations .main-hero__image--animate {
   /* Browser window animation */
   #browser {
     animation: fadeInRightBottom 1s forwards;

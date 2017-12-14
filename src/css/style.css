@@ -188,6 +188,7 @@ img {
 
 .main-hero {
   padding: 4.375rem 0 1.25rem;
+  overflow: hidden;
   background-image: url(../img/layout/topbg.svg);
   background-repeat: no-repeat;
   background-size: 110% 100%;
@@ -227,7 +228,8 @@ img {
       margin: 1.25rem auto 0; } }
 
 .page-section {
-  padding: 1.875rem 0; }
+  padding: 1.875rem 0;
+  overflow: hidden; }
   @media (min-width: 420px) {
     .page-section {
       padding: 5rem 0; } }
@@ -355,70 +357,70 @@ img {
 /*
 * Browser Animation
 */
-.cssanimations {
+.cssanimations .main-hero__image--animate {
   /* Browser window animation */
   /* Animation for all elements inside browser window besides menu */
   /* Menu elements animation */ }
-  .cssanimations #browser {
+  .cssanimations .main-hero__image--animate #browser {
     -webkit-animation: fadeInRightBottom 1s forwards;
             animation: fadeInRightBottom 1s forwards; }
-  .cssanimations #slider {
+  .cssanimations .main-hero__image--animate #slider {
     opacity: 0;
     -webkit-animation: fadeInTop 1s 0.7s forwards;
             animation: fadeInTop 1s 0.7s forwards; }
-  .cssanimations #img {
+  .cssanimations .main-hero__image--animate #img {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 1s forwards;
             animation: fadeInBottom 1s 1s forwards; }
-  .cssanimations #first-col {
+  .cssanimations .main-hero__image--animate #first-col {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 1.3s forwards;
             animation: fadeInBottom 1s 1.3s forwards; }
-  .cssanimations #second-col {
+  .cssanimations .main-hero__image--animate #second-col {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 1.6s forwards;
             animation: fadeInBottom 1s 1.6s forwards; }
-  .cssanimations #icon-1 {
+  .cssanimations .main-hero__image--animate #icon-1 {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 1.9s forwards;
             animation: fadeInBottom 1s 1.9s forwards; }
-  .cssanimations #col-1 {
+  .cssanimations .main-hero__image--animate #col-1 {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 2.2s forwards;
             animation: fadeInBottom 1s 2.2s forwards; }
-  .cssanimations #icon-2 {
+  .cssanimations .main-hero__image--animate #icon-2 {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 2.5s forwards;
             animation: fadeInBottom 1s 2.5s forwards; }
-  .cssanimations #col-2 {
+  .cssanimations .main-hero__image--animate #col-2 {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 2.8s forwards;
             animation: fadeInBottom 1s 2.8s forwards; }
-  .cssanimations #icon-3 {
+  .cssanimations .main-hero__image--animate #icon-3 {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 3.1s forwards;
             animation: fadeInBottom 1s 3.1s forwards; }
-  .cssanimations #col-3 {
+  .cssanimations .main-hero__image--animate #col-3 {
     opacity: 0;
     -webkit-animation: fadeInBottom 1s 3.4s forwards;
             animation: fadeInBottom 1s 3.4s forwards; }
-  .cssanimations #menu {
+  .cssanimations .main-hero__image--animate #menu {
     opacity: 0;
     -webkit-animation: fadeInTop 1s 2.7s forwards;
             animation: fadeInTop 1s 2.7s forwards; }
-  .cssanimations #menu-item-1 {
+  .cssanimations .main-hero__image--animate #menu-item-1 {
     opacity: 0;
     -webkit-animation: fadeInTop 1s 3s forwards;
             animation: fadeInTop 1s 3s forwards; }
-  .cssanimations #menu-item-2 {
+  .cssanimations .main-hero__image--animate #menu-item-2 {
     opacity: 0;
     -webkit-animation: fadeInTop 1s 3.3s forwards;
             animation: fadeInTop 1s 3.3s forwards; }
-  .cssanimations #menu-item-3 {
+  .cssanimations .main-hero__image--animate #menu-item-3 {
     opacity: 0;
     -webkit-animation: fadeInTop 1s 3.6s forwards;
             animation: fadeInTop 1s 3.6s forwards; }
-  .cssanimations #menu-item-4 {
+  .cssanimations .main-hero__image--animate #menu-item-4 {
     opacity: 0;
     -webkit-animation: fadeInTop 1s 3.9s forwards;
             animation: fadeInTop 1s 3.9s forwards; }

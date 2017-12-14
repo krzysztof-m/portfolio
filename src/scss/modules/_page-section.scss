@@ -1,5 +1,6 @@
 .page-section {
   padding: 1.875rem 0;
+  overflow: hidden;
   
   @include atSmallest {
     padding: 5rem 0;
