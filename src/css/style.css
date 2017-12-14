@@ -117,7 +117,8 @@ img {
       -webkit-transform: translateX(0);
               transform: translateX(0); }
   .btn--underline {
-    border-radius: 0; }
+    border-radius: 0;
+    border: 1px transparent solid; }
     .btn--underline::before {
       content: "";
       position: absolute;
@@ -137,7 +138,7 @@ img {
       -webkit-transform: scaleX(1);
               transform: scaleX(1); }
     .btn--underline:focus, .btn--underline:active {
-      border: 2px #fff solid; }
+      border: 1px #fff solid; }
   .btn--small {
     padding: .3em .7em; }
   .btn-group .btn {

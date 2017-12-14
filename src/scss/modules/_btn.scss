@@ -34,6 +34,7 @@
   
   &--underline {
     border-radius: 0;
+    border: 1px transparent solid;
     &::before {
       content: "";
       position: absolute;
@@ -52,7 +53,7 @@
     
     &:focus,
     &:active {
-      border: 2px #fff solid;
+      border: 1px #fff solid;
     }
   }
   
