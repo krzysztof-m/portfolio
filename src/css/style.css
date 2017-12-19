@@ -31,6 +31,12 @@ img {
   width: 100%;
   margin-top: 1.25rem; }
 
+.headline--center {
+  text-align: center; }
+
+.headline--margin {
+  margin: 1.875rem 0; }
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
