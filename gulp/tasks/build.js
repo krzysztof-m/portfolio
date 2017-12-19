@@ -30,7 +30,7 @@ gulp.task('optimizeImages', ['deleteDistFolder'], function() {
 });
 
 gulp.task('usemin', ['deleteDistFolder'], function() {
-  return gulp.src('./src/index.html')
+  return gulp.src('./src/*.html')
     .pipe(usemin({
       css: [
         //revision
