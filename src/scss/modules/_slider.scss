@@ -1,11 +1,18 @@
 .slider {
-  max-width: 400px;
-  min-height: 277px;
-  margin: 0 auto;
+  max-width: 290px;
+  min-height: 200px;
+  margin: 0 auto 20px;
   position: relative;
+  @include atSmallest {
+    max-width: 400px;
+    min-height: 277px;
+  }
+  @include atSmall {
+    margin: 0 auto;
+  }
   &__slide {
-    width: 400px;
-    height: 100%;
+    max-width: 400px;
+    height: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -46,6 +53,11 @@
     color: $color-primary;
     border: 2px $color-primary solid;
     position: relative;
+    margin: 0 7px;
+    
+    @include atSmall {
+      margin: 0;
+    }
     
     .fa {
       position: absolute;
