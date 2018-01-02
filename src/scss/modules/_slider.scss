@@ -1,0 +1,70 @@
+.slider {
+  max-width: 290px;
+  min-height: 200px;
+  margin: 0 auto 20px;
+  position: relative;
+  @include atSmallest {
+    max-width: 400px;
+    min-height: 277px;
+  }
+  @include atSmall {
+    margin: 0 auto;
+  }
+  &__slide {
+    max-width: 400px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: all .5s ease-out;
+    &--left {
+      transform: translateX(-15%) scale(.85) rotate(-5deg);
+    }
+    &--current {
+      z-index: 2;
+      box-shadow: 0 0 10px rgba(255,255,255,.8);
+    }
+    &--right {
+      transform: translateX(15%) scale(.85) rotate(5deg);
+    }
+  }
+  
+  &__nav {
+    position: absolute;
+    top: 100%;
+    z-index: 3;
+    width: 100%;
+  }
+  
+  &__btn-previous,
+  &__btn-next {
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    text-align: center;
+    vertical-align: middle;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: rgba(#fff, .8);
+    color: $color-primary;
+    border: 2px $color-primary solid;
+    position: relative;
+    margin: 0 7px;
+    
+    @include atSmall {
+      margin: 0;
+    }
+    
+    .fa {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+ 
+}
