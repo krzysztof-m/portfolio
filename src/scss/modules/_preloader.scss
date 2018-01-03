@@ -1,0 +1,61 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#fff,1);
+  background-image: url(../img/layout/portfoliobg.svg);
+  background-size: cover;
+  z-index: 9;
+  
+  .shape-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .shape {
+    width: 9.375rem;
+    height: 9.375rem;
+    background-color: lighten($color-primary, 60%);
+    border-radius: 2.1875rem;
+    animation: animation 1.5s ease-out infinite;
+    position: relative;
+    z-index: 1;
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 2.1875rem;
+    }
+    &::after {
+      background-color: lighten($color-primary, 30%);
+      transform: rotate(10deg);
+      z-index: -2;
+    }
+    &::before {
+
+      background-color: $color-primary;
+      transform: rotate(20deg);
+      z-index: -1;
+    }
+  }
+}
+
+@keyframes animation {
+  0% {
+    transform: scale(.5);
+  }
+  50% {
+    transform: scale(1) rotate(180deg);
+  }
+  100% {
+    transform: scale(.5);
+  }
+}
