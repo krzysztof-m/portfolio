@@ -1,4 +1,5 @@
 import ScrollReveal from 'scrollreveal';
+import $ from 'jquery';
 
 class CustomScrollReveal {
   constructor() {
@@ -32,9 +33,13 @@ class CustomScrollReveal {
   
   scrollRevealInit() {
     window.sr = ScrollReveal();
-    sr.reveal('.row__col-half.image', this.leftColAnimationOpt);
-    sr.reveal('.row__col-half.description', this.rightColAnimationOpt);
-    sr.reveal('.main-hero__image', this.browserAnimationOpt);
+    $(document).ready(() => {
+      setTimeout(() => {
+        sr.reveal('.row__col-half.image', this.leftColAnimationOpt);
+        sr.reveal('.row__col-half.description', this.rightColAnimationOpt);
+        sr.reveal('.main-hero__image', this.browserAnimationOpt);
+      }, 700);
+    });
   }
 }
 
